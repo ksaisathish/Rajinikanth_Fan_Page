@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+	<title>Rajinikanth-Home Page</title>
+	<meta charset="UTF-8" />
+	<meta name="language" content="EN" />
+	<meta name="author" content="Saisathish Karthikeyan 2020115071">
+	<meta name="description" content="An One-Stop Destination to know all about our Thalaivar Rajinikanth! A place where the art of our Thalaivar is appreciated and discussed!" />
+	<meta name="keywords" content="Rajinikanth, Rajini,Thalaivar, Rajinikanth biography, Rajinikanth achievements,Rajini Fans" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="icon" href="img/index/Title_Logo.jpeg" type="image/gif">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+	<script type="text/JavaScript" src="js/titlebar_nav.js"></script>
+	<script type="text/JavaScript" src="js/sign_log.js"></script>
+
+</head>
+
+<body>
+
+
+	<nav id="Sidepanel">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="index.html">Home</a>
+		<a href="PersonalLife/PersonalLife.html">Story of His Life</a>
+		<a href="BestFilms/BestFilms.html">Best Films</a>
+		<a href="BestSongs/BestSongs.html">Best Songs</a>
+		<a href="SourceAndCredits/SourceAndCredits.html">Source and Credits</a>
+	</nav>
+
+	<header id="TitleBar">
+
+		<button class="openbtn" id="openbtn" onclick="openNav()">&#9776;</button>
+		<h1 class="Neon">Super Star Rajinikanth</h1>
+		<h2 class="Neon">HOME PAGE</h2>
+		<button class="Loginbtn" onclick="openLogin()">Fan Login</button>
+
+	</header>
+
+	<div id="LogInForm">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeLogin()">&times;</a>
+		<form method="post" action="#" onsubmit="Login()" id="LogIn">
+			<h1>FAN LOGIN</h1>
+			<p>
+				<label for="UserID1"><b>User ID<abbr title="Required">*</abbr> : </b></label>
+				<input aria-required="true" id="UserID1" type="text" placeholder="Enter User ID" name="UserID" maxlength="15" pattern="^([- \w\d\u00c0-\u024f]+)$" title="No special characters!" required>
+			</p>
+			<p>
+				<label for="Pass"><b>Password<abbr title="Required">*</abbr> : </b></label>
+				<input aria-required="true" type="password" placeholder="Enter Password" name="Pass" maxlength="20" required>
+			</p>
+			<br />
+			<button type="submit" form="LogIn" value="Submit">Login</button>
+			<br />
+			<br />
+			<button type="button" onclick="openSignup()">Sign Up</button>
+		</form>
+
+	</div>
+
+	<div id="SignUpForm">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeSignup()">&times;</a>
+		<form method="post" action="#" id="SignUp" onsubmit="return ValidateSignUp()">
+			<h2>FAN SIGN-UP</h2>
+			<br />
+			<label ><b>Name<abbr title="Required">*</abbr>: </b></label>
+			<input aria-required="true" type="text" placeholder="Enter First Name" id="FName" maxlength="15" pattern="^([- \w\d\u00c0-\u024f]+)$" title="No special characters!" required>
+			<input aria-required="true" type="text" placeholder="Enter Last Name" id="LName" maxlength="15" pattern="^([- \w\d\u00c0-\u024f]+)$" title="No special characters!" required>
+			<br />
+			<br />
+			<label for="DOB">Date of Birth<abbr title="Required">*</abbr>:</label>
+			<input aria-required="true" type="date" id="DOB" name="DOB" required>
+			<br />
+			<span class="Msg" id='MsgDOB'></span>
+			<br />
+
+			<label for="EmailID"><b>Email ID<abbr title="Required">*</abbr>: </b></label>
+			<input aria-required="true" pattern="^(([-\w\d]+)(\.[-\w\d]+)*@([-\w\d]+)(\.[-\w\d]+)*(\.([a-zA-Z]{2,5}|[\d]{1,3})){1,2})$" id="EmailID" type="email" placeholder="Enter Email ID" name="EmailID" maxlength="30" required>
+			<br />
+			<br />
+			<label for="UserID2"><b>User ID<abbr title="Required">*</abbr>: </b></label>
+			<input aria-required="true" id="UserID2" type="text" placeholder="Enter User ID (Max 15 Char)" name="UserID" maxlength="15" pattern="^([- \w\d\u00c0-\u024f]+)$" title="No special characters!" required>
+			<br />
+			<br />
+			<label for="Pass"><b>Password<abbr title="Required">*</abbr>: </b></label>
+			<input aria-required="true" type="password" placeholder="Enter Password (Max 20 Char)" id="Pass" maxlength="20" onkeyup="CheckPassword()" required>
+			<input aria-required="true" type="password" placeholder="Enter Password Again" id="RePass" maxlength="20" onkeyup="CheckPassword()" required>
+			<br />
+			<span class="Msg" id='MsgPass'></span>
+			<br />
+			<br />
+
+			<button type="submit">Sign Up!</button>
+			<br />
+
+
+		</form>
+
+
+
+	</div>
+
+	<div id="Main">
+		<h1>INTRO TO THE SUPERSTAR!</h1>
+		<p>
+			<strong>Shivaji Rao Gaekwad</strong> fondly known as <strong>Rajinikanth</strong> is an Indian actor who works primarily in Tamil cinema.
+			Besides acting, he has produced some movies too. Before entering career in films,
+			Rajinikanth had pursued all odd jobs which includes one as a coolie and a bus conductor in Bangalore and acted in many Kannada plays as well.
+		</p>
+		<p>
+			After his debut in 1975 with the great <strong>K Balachander's</strong> directorial flick <strong>Apoorva Raagangal</strong>, he never looked back.
+			He has won several awards and accolades for his illustrious career in films including <strong>Film Fare, Tamil Nadu State Awards and National Awards.</strong>
+			He has also been awarded the <strong>Padma Shree, Padma Bhushan</strong> and <strong>Badma Vibhushan</strong>, the highest citizen award in India.
+			Rajinikanth enjoys a huge and crazy fan following in down south and highly popular in Hindi cinema as well.
+		</p>
+		<p>
+			Rajinikanth has been giving hints about his political interest at times and many political parties also have been trying to lure him.
+			The political battle-field is still to witness the heroics of the south super star.
+		</p>
+		<figure>
+			<img src="img/index/Collage.jpg" alt="A Collage of Many Cine-Rajini Characters!">
+			<br /><br /><br />
+			<figcaption>A Grand Collage depicting the various Cine-Roles taken up by Thalaivar!</figcaption>
+		</figure>
+
+		<br />
+
+	</div>
+
+	<br />
+	<br />
+
+	<footer id="Footer">
+		<br />
+		<aside class="left">
+			<h3>&#169; Copyright 2021 | Designed by SSK Creations</h3>
+			<h3><a href="SourceAndCredits/SourceAndCredits.html"><strong>Source and Credits</strong></a></h3>
+			<a href="https://www.facebook.com/Rajnikanthfanzz/" target="_blank" class="fa fa-facebook"></a>
+			<a href="https://twitter.com/rajinikanth" target="_blank" class="fa fa-twitter"></a>
+			<a href="https://www.youtube.com/c/SuperstarRajinikanthTheLegend" target="_blank" class="fa fa-youtube"></a>
+			<a href="https://www.instagram.com/rajinikanth" target="_blank" class="fa fa-instagram"></a>
+		</aside>
+		<aside class="right">
+			<h3>Contact Us at:</h3>
+			<h4>E-Mail : <a href="mailto:Admin@RajiniFans.com"><strong>Admin@RajiniFans.com</strong></a></h4>
+			<h4>Phone : <strong>+91 96XXX XXXXX</strong></h4>
+		</aside>
+	</footer>
+
+
+</body>
+
+</html>

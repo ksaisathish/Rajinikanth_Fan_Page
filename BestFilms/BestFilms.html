@@ -1,0 +1,337 @@
+﻿<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+	<title>Rajinikanth-Best Films</title>
+	<meta charset="UTF-8" />
+	<meta name="language" content="EN" />
+	<meta name="author" content="Saisathish Karthikeyan 2020115071">
+	<meta name="description" content="Top Films of our Thalaivar Rajinikanth!" />
+	<meta name="keywords" content="Rajinikanth, Rajini,Thalaivar,,Rajini Movies,Rajini Trailer, Padayappa,Baasha,Thalapathi,Muthu,Rajini Fans" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="icon" href="../img/index/Title_Logo.jpeg" type="image/gif">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+	<script type="text/JavaScript" src="../js/titlebar_nav.js"></script>
+	<script type="text/JavaScript" src="../js/sign_log.js"></script>
+
+</head>
+
+<body>
+
+
+
+	<nav id="Sidepanel">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="../index.html">Home</a>
+		<a href="../PersonalLife/PersonalLife.html">Story of His Life</a>
+		<a href="../BestFilms/BestFilms.html">Best Films</a>
+		<a href="../BestSongs/BestSongs.html">Best Songs</a>
+		<a href="../SourceAndCredits/SourceAndCredits.html">Source and Credits</a>
+	</nav>
+
+	<header id="TitleBar">
+		<button class="openbtn" id="openbtn" onclick="openNav()">&#9776;</button>
+		<div class="dropdown">
+			<button class="Contentbtn" id="Contentbtn" onclick="openContents()">Page Contents</button>
+			<div class="Contents" id="Contents">
+				<a href="#Film1">Baasha (1995)</a><br />
+				<a href="#Film2">16 Vayathinile (1977)</a><br />
+				<a href="#Film3">Thillu Mullu (1981)</a><br />
+				<a href="#Film4">Thalapathi (1991)</a><br />
+				<a href="#Film5">Muthu (1995)</a><br />
+
+			</div>
+		</div>
+		<h1 class="Neon">Super Star Rajinikanth</h1>
+		<h2 class="Neon">Best Films</h2>
+		<button class="Loginbtn" onclick="openLogin()">Fan Login</button>
+	</header>
+
+
+	<div id="LogInForm">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeLogin()">&times;</a>
+		<form method="post" action="#" onsubmit="Login()" id="LogIn">
+			<h1>FAN LOGIN</h1>
+			<p>
+				<label for="UserID1"><b>User ID<abbr title="Required">*</abbr> : </b></label>
+				<input aria-required="true" id="UserID1" type="text" placeholder="Enter User ID" name="UserID" maxlength="15" pattern="^([- \w\d\u00c0-\u024f]+)$" title="No special characters!" required>
+			</p>
+			<p>
+				<label for="Pass"><b>Password<abbr title="Required">*</abbr> : </b></label>
+				<input aria-required="true" type="password" placeholder="Enter Password" name="Pass" maxlength="20" required>
+			</p>
+			<br />
+			<button type="submit" form="LogIn" value="Submit">Login</button>
+			<br />
+			<br />
+			<button type="button" onclick="openSignup()">Sign Up</button>
+		</form>
+
+	</div>
+
+	<div id="SignUpForm">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeSignup()">&times;</a>
+		<form method="post" action="#" id="SignUp" onsubmit="return ValidateSignUp()">
+			<h2>FAN SIGN-UP</h2>
+			<br />
+			<label><b>Name<abbr title="Required">*</abbr>: </b></label>
+			<input aria-required="true" type="text" placeholder="Enter First Name" id="FName" maxlength="15" pattern="^([- \w\d\u00c0-\u024f]+)$" title="No special characters!" required>
+			<input aria-required="true" type="text" placeholder="Enter Last Name" id="LName" maxlength="15" pattern="^([- \w\d\u00c0-\u024f]+)$" title="No special characters!" required>
+			<br />
+			<br />
+			<label for="DOB">Date of Birth<abbr title="Required">*</abbr>:</label>
+			<input aria-required="true" type="date" id="DOB" name="DOB" required>
+			<br />
+			<span class="Msg" id='MsgDOB'></span>
+			<br />
+
+			<label for="EmailID"><b>Email ID<abbr title="Required">*</abbr>: </b></label>
+			<input aria-required="true" pattern="^(([-\w\d]+)(\.[-\w\d]+)*@([-\w\d]+)(\.[-\w\d]+)*(\.([a-zA-Z]{2,5}|[\d]{1,3})){1,2})$" id="EmailID" type="email" placeholder="Enter Email ID" name="EmailID" maxlength="30" required>
+			<br />
+			<br />
+			<label for="UserID2"><b>User ID<abbr title="Required">*</abbr>: </b></label>
+			<input aria-required="true" id="UserID2" type="text" placeholder="Enter User ID (Max 15 Char)" name="UserID" maxlength="15" pattern="^([- \w\d\u00c0-\u024f]+)$" title="No special characters!" required>
+			<br />
+			<br />
+			<label for="Pass"><b>Password<abbr title="Required">*</abbr>: </b></label>
+			<input aria-required="true" type="password" placeholder="Enter Password (Max 20 Char)" id="Pass" maxlength="20" onkeyup="CheckPassword()" required>
+			<input aria-required="true" type="password" placeholder="Enter Password Again" id="RePass" maxlength="20" onkeyup="CheckPassword()" required>
+			<br />
+			<span class="Msg" id='MsgPass'></span>
+			<br />
+			<br />
+
+			<button type="submit">Sign Up!</button>
+			<br />
+
+
+		</form>
+
+
+
+	</div>
+
+
+
+	<div id="Main">
+		<section class="Films">
+			<h1>Top Rajini Movies!</h1>
+			<p>
+				<strong>Superstar Rajinikanth</strong> began his career in <em>1975</em> with a relatively small role as an abusive husband with director <strong>K Balachander's</strong> <em>'Apoorva Raagangal'</em> starring <strong>Kamal Haasan</strong> in the lead.
+				<strong>Rajinikanth</strong> gradually rose to become a <em>star actor</em> after initially playing the role of an <em>antagonist</em> in his early films.
+				The <strong>growth</strong> of the star has been <em>phenomenal</em>.Here is a list of few of <strong>Rajinikanth's top movies</strong> over the years.
+			</p>
+
+			<br id="Film1" />
+			<br />
+			<article class="Film">
+
+				<aside class="left">
+					<h2>Baasha (1995)</h2>
+					<p class="content">
+						<strong>Baasha</strong> is an <em>action thriller film</em> starring <em>Rajinikanth, Nagma, and Raghuvaran</em> in which he played the role of a protagonist, who takes revenge for his friend's murder.
+						Not only did the film enjoy a <strong>highly positive box office</strong> response but also catapulted <em>Rajini</em> into the stratosphere of <strong>Super Stardom</strong>.
+						The punch dialogues and the mannerisms of Rajini were extremely well received!
+					</p>
+					<br />
+					<p>
+						<em>To Learn More,Visit:</em><br /><br />
+						Wikipedia : <a href="https://en.wikipedia.org/wiki/Baashha"> Baasha (1995)</a><br /><br />
+						<!-- Plug-In From IMDb. -->
+						<span class="imdbRatingPlugin" data-user="ur133148525" data-title="tt0139876" data-style="p2">
+
+							<a href="https://www.imdb.com/title/tt0139876/?ref_=plg_rt_1">
+								<img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_38x18.png" alt=" Baasha(1995) on IMDb" />
+							</a>
+							<br />
+						</span>
+						<script>(function (d, s, id) { var js, stags = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js"; stags.parentNode.insertBefore(js, stags); })(document, "script", "imdb-rating-api");</script>
+					</p>
+				</aside>
+
+				<aside class="right">
+					Baasha (1976)-Trailer-Youtube
+					<br /><br />
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/mppkR1JH5xk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</aside>
+
+			</article>
+			<br />
+			<br />
+
+			<br id="Film2" />
+			<br />
+			<article class="Film">
+
+				<aside class="left">
+					<h2>16 Vayathinile (1977)</h2>
+					<p class="content">
+						<strong>Rajnikanth</strong> played a village rogue called Parattai in the film and the <em>audiences</em> were left <strong>spellbound</strong> with his teasing line, <strong>'Idhu eppadi irukku?'</strong> (How is it?).
+						The film starred <em>Kamal Haasan, Rajinikanth and Sridevi</em> in the lead once again and went on to win <strong>four state awards.</strong>
+					</p>
+					<br />
+					<p>
+						<em>To Learn More,Visit:</em><br /><br />
+						Wikipedia : <a href="https://en.wikipedia.org/wiki/16_Vayathinile"> 16 Vayathinile (1977) </a><br /><br />
+						<!-- Plug-In From IMDb. -->
+						<span class="imdbRatingPlugin" data-user="ur133148525" data-title="tt0140448" data-style="p2">
+							<a href="https://www.imdb.com/title/tt0140448/?ref_=plg_rt_1">
+								<img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_38x18.png" alt=" Pathinaru Vayathinile(1977) on IMDb" />
+							</a>
+							<br />
+						</span>
+						<script>(function (d, s, id) { var js, stags = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js"; stags.parentNode.insertBefore(js, stags); })(document, "script", "imdb-rating-api");</script>
+					</p>
+				</aside>
+
+				<aside class="right">
+					16 Vayathinile (1977)-Full Movie-Youtube
+					<br /><br />
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/ZO18SpJTwFc" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+				</aside>
+
+			</article>
+			<br />
+			<br />
+
+			<br id="Film3" />
+			<br />
+			<article class="Film">
+
+				<aside class="left">
+					<h2>Thillu Mullu (1981)</h2>
+					<p class="content">
+						<strong>Rajini</strong> plays the carefree graduate named <em>Ayyampettai Arivudainambi Kaliyaperumal Chandran</em> and he pulls of <em>clean jokes effortlessly</em> making this movie a <em>classic laugh-a-thon</em>.
+						Rajinikanth had to shave his moustache for the film, making it the <em>first film</em> which featured him <em>without a moustache</em>.
+					</p>
+					<br />
+					<p>
+						<em>To Learn More,Visit:</em><br /><br />
+						Wikipedia : <a href="https://en.wikipedia.org/wiki/Thillu_Mullu"> Thillu Mullu (1981)</a><br /><br />
+						<!-- Plug-In From IMDb. -->
+						<span class="imdbRatingPlugin" data-user="ur133148525" data-title="tt0155265" data-style="p2">
+							<a href="https://www.imdb.com/title/tt0155265/?ref_=plg_rt_1">
+								<img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_38x18.png" alt=" Thillu Mullu(1981) on IMDb" />
+							</a>
+							<br />
+						</span>
+						<script>(function (d, s, id) { var js, stags = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js"; stags.parentNode.insertBefore(js, stags); })(document, "script", "imdb-rating-api");</script>
+					</p>
+				</aside>
+
+				<aside class="right">
+					Thillu Mullu (1981)-Full Movie-Youtube
+					<br /><br />
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/260Dt-fbk90" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</aside>
+
+			</article>
+			<br />
+			<br />
+
+			<br id="Film4" />
+			<br />
+			<article class="Film">
+
+				<aside class="left">
+					<h2>Thalapathi (1991)</h2>
+					<p class="content">
+						The movie had <em>Rajinikanth, Mammootty, Shobana</em> in the lead roles, which was directed by <em>Mani Ratnam</em>.
+						The theme is loosely based on the friendship between <em>Karna and Duryodhana</em> of the Hindu epic <strong>Mahabharatha</strong>.
+						This Mani Ratnam movie speaks for itself with <em>spectacular performances</em> by Rajini and is a <strong>timeless Tamil classic</strong>.
+						This movie was also important in the sense that it clearly understood that Rajini's fans can never accept him dying.
+					</p>
+					<br />
+					<p>
+						<em>To Learn More,Visit:</em><br /><br />
+						Wikipedia : <a href="https://en.wikipedia.org/wiki/Thalapathi"> Thalapathi (1991)</a><br /><br />
+						<!-- Plug-In From IMDb. -->
+						<span class="imdbRatingPlugin" data-user="ur133148525" data-title="tt0101649" data-style="p2">
+							<a href="https://www.imdb.com/title/tt0101649/?ref_=plg_rt_1">
+								<img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_38x18.png" alt=" Thalapathi (1991) on IMDb" />
+							</a>
+							<br />
+						</span>
+						<script>(function (d, s, id) { var js, stags = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js"; stags.parentNode.insertBefore(js, stags); })(document, "script", "imdb-rating-api");</script>
+					</p>
+				</aside>
+
+				<aside class="right">
+					Thalapathi (1991)-Trailer-Youtube
+					<br /><br />
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/pC5yWXqb8Ys" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</aside>
+
+			</article>
+			<br />
+			<br />
+
+			<br id="Film5" />
+			<br />
+			<article class="Film">
+
+				<aside class="left">
+					<h2>Muthu (1995)</h2>
+					<p class="content">
+						The film was a <strong>blockbuster</strong> and completed a <strong>175-day run</strong> at the box office.
+						It was later released in <em>Japanese</em> as Muthu Odoru Maharaja which means Muthu - The Dancing Maharaja.
+						The film grossed a <em>record US$ 1.6 million in Japan</em> in 1998 and was responsible for creating a <em>large Japanese fan-base</em> for the actor.
+						<strong>Muthu's success</strong> in Japan led <em>American News magazine Newsweek</em> to comment in a 1999 article that Rajinikanth had "supplanted Leonardo DiCaprio as <strong>Japan's trendiest heartthrob</strong>.
+					</p>
+					<br />
+					<p>
+						<em>To Learn More,Visit:</em><br /><br />
+						Wikipedia: <a href="https://en.wikipedia.org/wiki/Muthu_(film)"> Muthu (1995)</a><br /><br />
+						<!-- Plug-In From IMDb. -->
+						<span class="imdbRatingPlugin" data-user="ur133148525" data-title="tt0140399" data-style="p2">
+							<a href="https://www.imdb.com/title/tt0140399/?ref_=plg_rt_1">
+								<img src="https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/images/imdb_38x18.png" alt=" Muthu(1995) on IMDb" /><br />
+							</a>
+							<br />
+						</span>
+						<script>(function (d, s, id) { var js, stags = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "https://ia.media-imdb.com/images/G/01/imdb/plugins/rating/js/rating.js"; stags.parentNode.insertBefore(js, stags); })(document, "script", "imdb-rating-api");</script>
+					</p>
+				</aside>
+
+				<aside class="right">
+					Muthu (1995)- Trailer -Youtube
+					<br /><br />
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/-EUPpNsu1UE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</aside>
+
+			</article>
+			<br />
+			<br />
+		</section>
+		<br />
+	</div>
+
+	<br />
+	<br />
+
+
+	<footer id="Footer">
+		<br />
+		<aside class="left">
+			<h3>&#169; Copyright 2021 | Designed by SSK Creations</h3>
+			<h3><a href="../SourceAndCredits/SourceAndCredits.html"><strong>Source and Credits</strong></a></h3>
+			<a href="https://www.facebook.com/Rajnikanthfanzz/" target="_blank" class="fa fa-facebook"></a>
+			<a href="https://twitter.com/rajinikanth" target="_blank" class="fa fa-twitter"></a>
+			<a href="https://www.youtube.com/c/SuperstarRajinikanthTheLegend" target="_blank" class="fa fa-youtube"></a>
+			<a href="https://www.instagram.com/rajinikanth" target="_blank" class="fa fa-instagram"></a>
+		</aside>
+		<aside class="right">
+			<h3>Contact Us at:</h3>
+			<h4>E-Mail : <a href="mailto:Admin@RajiniFans.com"><strong>Admin@RajiniFans.com</strong></a></h4>
+			<h4>Phone : <strong>+91 96XXX XXXXX</strong></h4>
+
+		</aside>
+	</footer>
+
+</body>
+
+</html>

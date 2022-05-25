@@ -1,0 +1,343 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<title>Rajinikanth-Best Songs</title>
+	<meta charset="UTF-8" />
+	<meta name="language" content="EN" />
+	<meta name="author" content="Saisathish Karthikeyan 2020115071">
+	<meta name="description" content="Thalaivar Rajinikanth's Best Music Hits!" />
+	<meta name="keywords" content="Rajinikanth, Rajini,Thalaivar, Rajinikanth Songs,SPB,Vairamuthu,Rajini Fans,Intro Song" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="icon" href="../img/index/Title_Logo.jpeg" type="image/gif">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+	<script type="text/JavaScript" src="../js/titlebar_nav.js"></script>
+	<script type="text/JavaScript" src="../js/sign_log.js"></script>
+	<script type="text/JavaScript" src="../js/audio.js"></script>
+
+</head>
+
+<body onload="DefaultVolume()">
+
+
+	<nav id="Sidepanel">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="../index.html">Home</a>
+		<a href="../PersonalLife/PersonalLife.html">Story of His Life</a>
+		<a href="../BestFilms/BestFilms.html">Best Films</a>
+		<a href="../BestSongs/BestSongs.html">Best Songs</a>
+		<a href="../SourceAndCredits/SourceAndCredits.html">Source and Credits</a>
+	</nav>
+
+	<header id="TitleBar">
+
+		<button class="openbtn" id="openbtn" onclick="openNav()">&#9776;</button>
+		<div class="dropdown">
+			<button class="Contentbtn" id="Contentbtn" >Page Contents</button>
+			<div class="Contents" id="Contents">
+				<a href="#Song1">Vandhen Da Paalkaran</a><br />
+				<a href="#Song2">Naa Autokaran</a><br />
+				<a href="#Song3">Oruvan Oruvan Mudhalali</a><br />
+				<a href="#Song4">En Peru Padayappa</a><br />
+				<a href="#Song5">Ulagam Oruvanukka</a><br />
+			</div>
+		</div>
+		<h1 class="Neon">Super Star Rajinikanth</h1>
+		<h2 class="Neon">Best Songs</h2>
+		<button class="Loginbtn" onclick="openLogin()">Fan Login</button>
+
+	</header>
+
+
+	<div id="LogInForm">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeLogin()">&times;</a>
+		<form method="post" action="#" onsubmit="Login()" id="LogIn">
+			<h1>FAN LOGIN</h1>
+			<p>
+				<label for="UserID1"><b>User ID<abbr title="Required">*</abbr> : </b></label>
+				<input aria-required="true" id="UserID1" type="text" placeholder="Enter User ID" name="UserID" maxlength="15" pattern="^([- \w\d\u00c0-\u024f]+)$" title="No special characters!" required>
+			</p>
+			<p>
+				<label for="Pass"><b>Password<abbr title="Required">*</abbr> : </b></label>
+				<input aria-required="true" type="password" placeholder="Enter Password" name="Pass" maxlength="20" required>
+			</p>
+			<br />
+			<button type="submit" form="LogIn" value="Submit">Login</button>
+			<br />
+			<br />
+			<button type="button" onclick="openSignup()">Sign Up</button>
+		</form>
+
+	</div>
+
+	<div id="SignUpForm">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeSignup()">&times;</a>
+		<form method="post" action="#" id="SignUp" onsubmit="return ValidateSignUp()">
+			<h2>FAN SIGN-UP</h2>
+			<br />
+			<label><b>Name<abbr title="Required">*</abbr>: </b></label>
+			<input aria-required="true" type="text" placeholder="Enter First Name" id="FName" maxlength="15" pattern="^([- \w\d\u00c0-\u024f]+)$" title="No special characters!" required>
+			<input aria-required="true" type="text" placeholder="Enter Last Name" id="LName" maxlength="15" pattern="^([- \w\d\u00c0-\u024f]+)$" title="No special characters!" required>
+			<br />
+			<br />
+			<label for="DOB">Date of Birth<abbr title="Required">*</abbr>:</label>
+			<input aria-required="true" type="date" id="DOB" name="DOB" required>
+			<br />
+			<span class="Msg" id='MsgDOB'></span>
+			<br />
+
+			<label for="EmailID"><b>Email ID<abbr title="Required">*</abbr>: </b></label>
+			<input aria-required="true" pattern="^(([-\w\d]+)(\.[-\w\d]+)*@([-\w\d]+)(\.[-\w\d]+)*(\.([a-zA-Z]{2,5}|[\d]{1,3})){1,2})$" id="EmailID" type="email" placeholder="Enter Email ID" name="EmailID" maxlength="30" required>
+			<br />
+			<br />
+			<label for="UserID2"><b>User ID<abbr title="Required">*</abbr>: </b></label>
+			<input aria-required="true" id="UserID2" type="text" placeholder="Enter User ID (Max 15 Char)" name="UserID" maxlength="15" pattern="^([- \w\d\u00c0-\u024f]+)$" title="No special characters!" required>
+			<br />
+			<br />
+			<label for="Pass"><b>Password<abbr title="Required">*</abbr>: </b></label>
+			<input aria-required="true" type="password" placeholder="Enter Password (Max 20 Char)" id="Pass" maxlength="20" onkeyup="CheckPassword()" required>
+			<input aria-required="true" type="password" placeholder="Enter Password Again" id="RePass" maxlength="20" onkeyup="CheckPassword()" required>
+			<br />
+			<span class="Msg" id='MsgPass'></span>
+			<br />
+			<br />
+
+			<button type="submit">Sign Up!</button>
+			<br />
+
+
+		</form>
+
+
+
+	</div>
+
+
+
+
+
+	<div id="Main">
+		<section class="Songs">
+			<h1>Top 5 Rajini Intro Songs!</h1>
+			<p>
+				In a traditional <em>Star-Driven</em> film, the hero's <strong>Introductory song</strong> is as important as the story itself. And if it's a Rajini Film, it is no doubt that the Intro Songs packs
+				a punch! Let us hear and admire a few of the best Intro Songs!!
+			</p>
+
+			<br id="Song1" />
+			<br />
+			<article class="Song">
+
+                <aside class="left">
+
+                    <h2>Vandhen Da Paalkaran</h2>
+                    <p class="content">
+                        In a career spanning over 40 years, Rajinikanth's work on <strong>‘Annamalai’</strong> was one of his best.
+                        He plays a <em>humble milkman Annamalai</em>, who befriends Ashok (Sarathbabu), a wealthy businessman.
+                        The film tracks the story of the <em>bonding</em> between the two friends, who later become <em>staunch rivals</em>.
+                        Even after all these years, ‘Annamalai’ holds a special place in the audience's heart for its <strong>touching story and terrific performances.</strong>
+                        In this film directed by <strong>Suresh Krishna</strong>, Rajinikanth is introduced with the song ‘Vandhen Da Paal Karen’, composed by Deva.
+                        The main <em>highlight</em> of the song is the lyrics that <em>glorified its hero</em>.
+                    </p>
+                    <br /><br />
+                    <p>
+                        Movie: <strong>Annamalai</strong> | Singer(s): <strong>S. P. Balasubrahmanyam</strong> |<br />
+                        Music Director: <strong>Deva</strong> | Lyricist: <strong>Vairamuthu</strong>
+                    </p>
+                </aside>
+
+				<aside class="right">
+					<figure>
+						<br /><br />
+						<img src="../img/BestSongs/Image1.jpeg" class="Image" alt="Image 1">
+						<br /><br /><br />
+						<audio class="Audio" controls>
+							<source src="../audio/BestSongs/Song1.mp3" type="audio/mpeg">
+							Your browser does not support the audio element.
+						</audio>
+					</figure>
+				</aside>
+
+			</article>
+			<br />
+			<br />
+
+			<br id="Song2" />
+			<br />
+			<article class="Song">
+
+				<aside class="left">
+					<h2>Naa Autokaran</h2>
+					<p class="content">
+						Ask any ‘90s kid his/her favourite Rajinikanth film and the list would be incomplete without ‘Baasha’.
+						Regarded as one of the <strong>finest gangster films</strong> in the history of Tamil cinema, <em>‘Baasha’</em> saw Rajinikanth at his best when the film released in 1995.
+						Playing the role of a notorious gangster, <strong>Rajinikanth</strong> was <em>introduced</em> to the audiences through the song <em>‘Naan Autokaran’</em>, which was composed by Deva and sung by <em>SP Balasubramaniam</em>.
+						In fact, Deva gave some of his best songs to Rajinikanth in the ‘90s.The <em>entire album</em> of ‘Baasha’ was declared <em>chartbuster</em> upon release.
+						‘Baasha’ itself emerged as one of the <em>highest grossing films</em> at that time.
+					</p>
+					<br /><br />
+					<p>
+						Movie:<strong>Baasha</strong> | Singer(s): <strong>S. P. Balasubrahmanyam</strong> |<br /><br />
+						Music Director:<strong>Deva</strong> | Lyricist:<strong>Vairamuthu</strong>
+					</p>
+				</aside>
+
+				<aside class="right">
+					<figure>
+						<br /><br />
+						<img src="../img/BestSongs/Image2.jpeg" class="Image" alt="Image 2">
+						<br /><br /><br />
+						<audio class="Audio" controls>
+							<source src="../audio/BestSongs/Song2.mp3" type="audio/mpeg">
+							Your browser does not support the audio element.
+						</audio>
+					</figure>
+				</aside>
+
+			</article>
+			<br />
+			<br />
+
+			<br id="Song3" />
+			<br />
+			<article class="Song">
+
+				<aside class="left">
+					<h2>Oruvan Oruvan Mudhalali</h2>
+					<p class="content">
+						Composed by <strong>AR Rahman</strong>, the song ‘Oruvan Oruvan Mudhalali’ is arguably one of the <em>best introductory songs</em> of Rajinikanth.
+						The ‘Muthu’ album was a <strong>huge hit</strong> and was selected as the <em>most popular foreign soundtrack</em> in Japan.
+						Rajinikanth plays the role of a servant in the film, which was later remade in several languages.
+						After the success of the film, he became the first Indian actor, whose film opened to an overwhelming response in Japan.
+						Yes, you read that right! A Japanese dubbed version of ‘Muthu’ was equally successful at the box office.
+					</p>
+					<br /><br />
+					<p>
+						Movie: <strong>Muthu</strong> | Singer(s): <strong>S. P. Balasubrahmanyam</strong> |<br /><br />
+						Music Director:<strong>A R Rahman</strong> | Lyricist: <strong>Vairamuthu</strong>
+					</p>
+				</aside>
+
+				<aside class="right">
+					<figure>
+						<br /><br />
+						<img src="../img/BestSongs/Image3.jpeg" class="Image" alt="Image 3">
+						<br /><br /><br />
+						<audio class="Audio" controls>
+							<source src="../audio/BestSongs/Song3.mp3" type="audio/mpeg">
+							Your browser does not support the audio element.
+						</audio>
+					</figure>
+				</aside>
+
+			</article>
+			<br />
+			<br />
+
+			<br id="Song4" />
+			<br />
+			<article class="Song">
+
+				<aside class="left">
+					<h2>En Peru Padayappa</h2>
+					<p class="content">
+						<strong>'Padayappa'</strong> marked Rajinikanth’s second collaboration with <strong>AR Rahman</strong> after the blockbuster success of ‘Muthu’.
+						In Padayappa (1999), the scene where Rajinikanth was introduced can only be described as ‘pompous’.
+						It set the <strong>standard for an entry scene</strong>, which was followed by the song <em>‘En Peru Padayappa’</em>, composed by AR Rahman.
+						The lyrics of the song was written in such a way that it glorified both the on and off personas of Rajinikanth, thus gaining <em>cult status</em> among the youth.
+						Directed by <strong>KS Ravikumar</strong>, ‘Padayappa’ opened to rave reviews and became an <em>out-and-out money spinner</em> at the box office.
+						Apart from ‘En Peru Padayappa’, the song ‘Vetri Kodi Kattu’ was also a smash hit upon release.
+					</p>
+					<br /><br />
+					<p>
+						Movie:<strong>Padayappa</strong> | Singer(s): <strong>S. P. Balasubrahmanyam</strong> |<br /><br />
+						Music Director:<strong> A R Rahman</strong> | Lyricist: <strong>Vairamuthu</strong>
+					</p>
+				</aside>
+
+				<aside class="right">
+					<figure>
+						<br /><br />
+						<img src="../img/BestSongs/Image4.jpeg" class="Image" alt="Image 1">
+						<br /><br /><br />
+						<audio class="Audio" controls>
+							<source src="../audio/BestSongs/Song4.mp3" type="audio/mpeg">
+							Your browser does not support the audio element.
+						</audio>
+					</figure>
+				</aside>
+
+			</article>
+			<br />
+			<br />
+
+			<br id="Song5" />
+			<br />
+			<article class="Song">
+
+				<aside class="left">
+					<h2>Ulagam Oruvanukka</h2>
+					<p class="content">
+						A Rajinikanth film needs no promotion and that was evident when his film <strong>‘Kabali’</strong> hit screens in 2016.
+						Over the years, Rajinikanth’s films mostly featured singer SP Balasubramaniam crooning the introduction song.
+						However, <strong>Santhosh Narayanan</strong> surprised the audience with the song ‘Ulagam Oruvanukka’, which was <em>sung by him, Gana Bala and Anand</em>.
+						Much to everyone’s expectations, ‘Ulagam Oruvanukka’ was received with open-arms and is regarded as one of <em>Rajinikanth’s best introduction songs</em>.
+						Unlike other popular Rajinikanth songs, the beauty of ‘Ulagam Oruvanukka’ was its lyrics, which was compensated by the visuals.
+						Despite mixed reviews, ‘Kabali’ wreaked havoc at the box office and became successful.
+					</p>
+					<br /><br />
+					<p>
+						Movie: <strong>Kabali</strong> | Singer(s): <strong>Santhosh Narayanan, Gana Bala and Anand</strong> |<br /><br />
+						Music Director: <strong>Santhosh Narayanan</strong> | Lyricists:<strong>Kabilan,Vivek,Roshan Jamrock</strong>
+					</p>
+				</aside>
+
+				<aside class="right">
+					<figure>
+						<br /><br />
+						<img src="../img/BestSongs/Image5.jpeg" class="Image" alt="Image 1">
+						<br /><br /><br />
+						<audio class="Audio" controls>
+							<source src="../audio/BestSongs/Song5.mp3" type="audio/mpeg">
+							Your browser does not support the audio element.
+						</audio>
+					</figure>
+				</aside>
+
+
+			</article>
+			<br />
+			<br />
+
+		</section>
+
+		<br />
+
+	</div>
+
+	<br />
+	<br />
+
+	<footer id="Footer">
+		<br />
+		<aside class="left">
+			<h3>&#169; Copyright 2021 | Designed by SSK Creations</h3>
+			<h3><a href="../SourceAndCredits/SourceAndCredits.html"><strong>Source and Credits</strong></a></h3>
+			<a href="https://www.facebook.com/Rajnikanthfanzz/" target="_blank" class="fa fa-facebook"></a>
+			<a href="https://twitter.com/rajinikanth" target="_blank" class="fa fa-twitter"></a>
+			<a href="https://www.youtube.com/c/SuperstarRajinikanthTheLegend" target="_blank" class="fa fa-youtube"></a>
+			<a href="https://www.instagram.com/rajinikanth" target="_blank" class="fa fa-instagram"></a>
+		</aside>
+		<aside class="right">
+			<h3>Contact Us at:</h3>
+			<h4>E-Mail : <a href="mailto:Admin@RajiniFans.com"><strong>Admin@RajiniFans.com</strong></a></h4>
+			<h4>Phone : <strong>+91 96XXX XXXXX</strong></h4>
+
+		</aside>
+	</footer>
+
+</body>
+
+</html>

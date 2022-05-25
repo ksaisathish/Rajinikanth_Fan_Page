@@ -1,0 +1,409 @@
+﻿	<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+	<title>Rajinikanth-Story of His Life</title>
+	<meta charset="UTF-8" />
+	<meta name="language" content="EN" />
+	<meta name="author" content="Saisathish Karthikeyan 2020115071">
+	<meta name="description" content="Thalaivar Rajinikanth's Life Story-His Biography!" />
+	<meta name="keywords" content="Rajinikanth, Rajini,Thalaivar,RajinikanthPersonal Life,Rajinikanth Career, Rajinikanth achievements,Rajini Fans" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="icon" href="../img/index/Title_Logo.jpeg" type="image/gif">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+	<script type="text/JavaScript" src="../js/titlebar_nav.js"></script>
+	<script type="text/JavaScript" src="../js/sign_log.js"></script>
+
+</head>
+
+<body>
+
+
+
+	<nav id="Sidepanel">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="../index.html">Home</a>
+		<a href="../PersonalLife/PersonalLife.html">Story of His Life</a>
+		<a href="../BestFilms/BestFilms.html">Best Films</a>
+		<a href="../BestSongs/BestSongs.html">Best Songs</a>
+		<a href="../SourceAndCredits/SourceAndCredits.html">Source and Credits</a>
+	</nav>
+
+	<header id="TitleBar">
+
+		<button class="openbtn" id="openbtn" onclick="openNav()">&#9776;</button>
+		<div class="dropdown">
+			<button class="Contentbtn" id="Contentbtn" onclick="openContents()">Page Contents</button>
+			<div class="Contents" id="Contents">
+				<a href="#Intro">Introduction</a><br />
+				<a href="#EarlyLife">Early Life</a><br />
+				<a href="#CareerLife">Career Life</a><br />
+				<a href="#CommercialStardom">Commercial Stardom</a><br />
+				<a href="#Early2000s">Early 2000s!</a><br />
+				<a href="#PresentDay">Present Day Thalaivar!</a><br />
+
+			</div>
+		</div>
+		<h1 class="Neon">Super Star Rajinikanth</h1>
+		<h2 class="Neon">Story of His Life</h2>
+		<button class="Loginbtn" onclick="openLogin()">Fan Login</button>
+
+	</header>
+
+
+
+	<div id="LogInForm">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeLogin()">&times;</a>
+		<form method="post" action="#" onsubmit="Login()" id="LogIn">
+			<h1>FAN LOGIN</h1>
+			<p>
+				<label for="UserID1"><b>User ID<abbr title="Required">*</abbr> : </b></label>
+				<input aria-required="true" id="UserID1" type="text" placeholder="Enter User ID" name="UserID" maxlength="15" pattern="^([- \w\d\u00c0-\u024f]+)$" title="No special characters!" required>
+			</p>
+			<p>
+				<label for="Pass"><b>Password<abbr title="Required">*</abbr> : </b></label>
+				<input aria-required="true" type="password" placeholder="Enter Password" name="Pass" maxlength="20" required>
+			</p>
+			<br />
+			<button type="submit" form="LogIn" value="Submit">Login</button>
+			<br />
+			<br />
+			<button type="button" onclick="openSignup()">Sign Up</button>
+		</form>
+
+	</div>
+
+	<div id="SignUpForm">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeSignup()">&times;</a>
+		<form method="post" action="#" id="SignUp" onsubmit="return ValidateSignUp()">
+			<h2>FAN SIGN-UP</h2>
+			<br />
+			<label><b>Name<abbr title="Required">*</abbr>: </b></label>
+			<input aria-required="true" type="text" placeholder="Enter First Name" id="FName" maxlength="15" pattern="^([- \w\d\u00c0-\u024f]+)$" title="No special characters!" required>
+			<input aria-required="true" type="text" placeholder="Enter Last Name" id="LName" maxlength="15" pattern="^([- \w\d\u00c0-\u024f]+)$" title="No special characters!" required>
+			<br />
+			<br />
+			<label for="DOB">Date of Birth<abbr title="Required">*</abbr>:</label>
+			<input aria-required="true" type="date" id="DOB" name="DOB" required>
+			<br />
+			<span class="Msg" id='MsgDOB'></span>
+			<br />
+
+			<label for="EmailID"><b>Email ID<abbr title="Required">*</abbr>: </b></label>
+			<input aria-required="true" pattern="^(([-\w\d]+)(\.[-\w\d]+)*@([-\w\d]+)(\.[-\w\d]+)*(\.([a-zA-Z]{2,5}|[\d]{1,3})){1,2})$" id="EmailID" type="email" placeholder="Enter Email ID" name="EmailID" maxlength="30" required>
+			<br />
+			<br />
+			<label for="UserID2"><b>User ID<abbr title="Required">*</abbr>: </b></label>
+			<input aria-required="true" id="UserID2" type="text" placeholder="Enter User ID (Max 15 Char)" name="UserID" maxlength="15" pattern="^([- \w\d\u00c0-\u024f]+)$" title="No special characters!" required>
+			<br />
+			<br />
+			<label for="Pass"><b>Password<abbr title="Required">*</abbr>: </b></label>
+			<input aria-required="true" type="password" placeholder="Enter Password (Max 20 Char)" id="Pass" maxlength="20" onkeyup="CheckPassword()" required>
+			<input aria-required="true" type="password" placeholder="Enter Password Again" id="RePass" maxlength="20" onkeyup="CheckPassword()" required>
+			<br />
+			<span class="Msg" id='MsgPass'></span>
+			<br />
+			<br />
+
+			<button type="submit">Sign Up!</button>
+			<br />
+
+
+		</form>
+
+
+
+	</div>
+
+
+	<div id="Main">
+		<div class="Life">
+			<aside class="NLeft">
+				<section id="Intro">
+					<br /><br />
+					<hr /><br />
+					<h2>Introduction</h2>
+					<p>
+						<strong>Shivaji Rao Gaekwad</strong>, known professionally as <strong>Rajinikanth</strong>, is an Indian actor who works primarily in <strong>Tamil cinema</strong>.
+						In addition to acting, he has also worked as a producer and screenwriter.
+						He has won many awards throughout his Cine-Life.
+					</p>
+					<p>
+						Following his debut in K. Balachander's 1975 Tamil drama <strong>Apoorva Raagangal</strong>, Rajinikanth's acting career commenced with a brief phase of portraying antagonistic characters in Tamil films.
+						With <strong>Baashha (1995)</strong> in which Rajinikanth played a crime boss,his career propelled and earned him a <em>'God-Like' Status</em> in Tamil Nadu.
+						His <strong>Sivaji (2007)</strong> was the third Indian film to enter the 100 Crore Club.
+						He played dual roles, as a scientist and an andro-humanoid robot, in the science fiction film <strong>Enthiran (2010)</strong> and its sequel <strong>2.0 (2018)</strong>,
+						both being India's most expensive production at the time of their release, and among the one of <em>Highest-Grossing Indian Films</em> of all time.
+					</p>
+					<p>
+						Rajinikanth is widely regarded as one of the popular actors in the history of Indian cinema.
+						His popularity has been attributed to his uniquely styled dialogues and idiosyncrasies in films, as well as his political statements and philanthropy.
+						Rajinikanth is the only Indian actor to be featured in the Central Board of Secondary Education (CBSE) syllabus,in a lesson titled From Bus Conductor to Superstar.
+						On 31 December 2017, he announced entry into politics and confirmed his intention to contest in the 2021 Tamil Nadu Legislative Assembly elections in all 234 constituencies
+						but later withdrew due to health conditions.
+					</p>
+					<br />
+				</section>
+
+
+				<section id="EarlyLife">
+					<br /><br /><hr /><br />
+					<h2>Early life</h2>
+					<p>
+						Rajinikanth was born as <strong>Shivaji Rao Gaekwad</strong> on <em>12 December 1950</em> in a Marathi family in <em>Bangalore, Mysore State</em> (present day Karnataka).
+						He was named after the Maratha Empire king Shivaji, and was brought up speaking Marathi at home and Kannada outside.
+						<em>His mother was a housewife, and his father Ramoji Rao Gaekwad was a police constable.</em>He is the youngest of four siblings.
+						After his father's retirement from work in 1956, the family moved to the suburb of Hanumantha Nagar in Bangalore and built a house there.
+						He lost his mother at the age of nine.
+
+					</p>
+
+					<p>
+						Rajinikanth had his <strong>primary education</strong> at the <em>Gavipuram Government Kannada Model Primary School</em> in Bangalore.
+						As a child, he was <em>"studious and mischievous"</em> with a great interest in cricket, football and basketball.
+						His brother enrolled him at the <em>Ramakrishna Math</em>,a Hindu monastery, where he was taught Vedas, tradition and history,
+						hich eventually instilled a sense of spirituality in him.In addition to spiritual lessons, he also <em>began acting in plays at the math</em>.
+						His <em>aspiration towards theatre grew</em> at the math and was once given an opportunity to enact the <em>role of Ekalavya's friend from the Hindu epic Mahabharata</em>.
+						Later,Rajinikanth was enrolled at the Acharya Pathasala Public School and studied there till completion of his pre-university course.In this duration he had enacted multiple plays.
+					</p>
+
+					<p>
+						Upon completion of his school education, Rajinikanth performed <strong>several jobs</strong> including that of a <em>coolie</em>,
+						before getting a job in the <em>Bangalore Transport Service (BTS) as a bus conductor</em>. He continued to take part in <strong>various plays</strong> during this time too.
+						He decided to take up an acting course in the newly formed <strong>Madras Film Institute</strong> after coming across an advertisement.
+						During his stay at the institute, he was <strong>noticed</strong> by the Tamil film director <em>K. Balachander</em>.
+						<br /><br />
+						<strong>And Thus, Began the Legend's Journey!</strong>
+					</p>
+
+
+				</section>
+
+
+				<section id="CareerLife">
+					<br /><br /><hr /><br />
+					<h2>Career Life</h2>
+					<p>
+						Rajinikanth began his film career with the Tamil film <strong>Apoorva Raagangal (1975)</strong>, directed by <strong>K. Balachander</strong>.
+						He was cast in a small role,but he was welcomed by the Audience.Review from The Hindu noted that:
+						<em>"Newcomer Rajinikanth is dignified and impressive!"</em>.Rajini, then went on to act in many films, few including
+						<em>'Moondru Mudichu','16 Vayadhinile',etc</em>. He then went on to make his <em>first-ever appearance</em> as a <em>lead actor</em>
+						in the Telugu film 'Chilakamma Cheppindi'.
+					</p>
+					<p>
+						In the 80s, Rajinikanth began to experiment with his films and also earned a <strong>loyal fandom</strong>.
+						<strong>Bairavi</strong>, directed by M.Bhaskar, was the first Tamil film to cast Rajinikanth as a solo hero,
+						and it was for this film that he earned the <strong>sobriquet "Superstar"</strong>.
+						His film, <strong>Mullum Malarum</strong>, released during the same period, received <em>critical acclaim</em>.
+						It won that year's <em>Filmfare Award for Best Tamil Film and a Special Prize (Best Actor)</em> for Rajinikanth at the Tamil Nadu State Film Awards.
+						Following this, he made a foray into <em>Malayalam cinema</em>. Rajinikanth had acted in 50 films over a period of four years, and in four languages.
+						In the second half of the 1980s, Rajinikanth acted in commercially successful films such as <em>Naan Sigappu Manithan (1985), Padikkathavan (1985), Mr. Bharath (1986),
+						Velaikaran (1987), Guru Sishyan (1988) and Dharmathin Thalaivan (1988)</em>.
+						In 1988, he made his only <strong>American film</strong> appearance in <em>Bloodstone</em>, directed by Dwight Little, in which he played an English-speaking Indian taxi driver.
+					</p>
+
+				</section>
+
+
+				<section id="CommercialStardom">
+					<br /><br /><hr /><br />
+					<h2>Commercial Stardom</h2>
+					<p>
+						By the 1990s, Rajinikanth established himself as a <strong>commercial entertainer</strong>.
+						Almost all the films released during this period were <strong>highly successful</strong> at the box office.
+						His stint with Bollywood continued, and he went on to star in more Hindi films.
+						In this period he acted in many films such as <em>'Thalapthi', 'Annamalai', 'Mannan', 'Veera', etc</em>.
+						He joined hands with <strong>Suresh Krishna</strong> for <em>Baashha (1995)</em>, which emerged as an industry record,
+						and is routinely touted by fans and critics alike as a major-hit, as the film elevated him
+						from being just another very popular actor to nearly <strong>Demi-God Status</strong> among the masses!
+						His film Muthu,was another commercial success,and became the first Tamil film to be dubbed into Japanese.
+						The film grossed a record US$1.6 million in Japan in 1998 and was responsible for creating a <em>large Japanese fan-base</em> for the actor.
+						1997's <strong>Arunachalam</strong> was another <em>commercial success</em>. Rajinikanth released his last film of the millennium with <strong>Padayappa (1999)</strong>,
+						which went on to become a <em>blockbuster success</em>.
+					</p>
+					
+
+				</section>
+
+
+				<section id="Early2000s">
+
+					<br /><br /><hr /><br />
+					<h2>Early 2000s!</h2>
+					<p>
+						The Early 2000s had been a bit of a <em>struggle</em> for Thalaivar, as few films reported
+						losses. With  <strong>P. Vasu's Chandramukhi (2005)</strong>, Rajini created another highly Successful film
+						which set the record for the <em>Longest Running Tamil film!</em> Th film <strong>Sivaji</strong>, one of the <em>crowd favourites</em>,
+						was also released in 2007. But his next film, Kuselan fared poorly in the box-office.<br />
+						But Ups and downs are a part of life right?<br />
+						Superstar Rajni once again proved that he is the actor with the Midas touch with the <strong>Sci-Fi Flick Enthiran</strong>,
+						where he played an ambitious scientist, a naive robot and an evil android bent on destroying the world.<br />
+						He did it with such aplomb that he's been the talk of the town for months!
+
+					</p>
+
+					<br />
+				</section>
+
+				<section id="PresentDay">
+
+					<br /><br /><hr /><br />
+					<h2>To the Present Day Thalaivar!</h2>
+					<p>
+						In January 2011, Rajinikanth had <em>fell ill and was diagnosed with bronchitis</em>.
+						He was <strong>hospitalised</strong> and started to take treatment.Rajinikanth, under the advice of Amitabh Bachchan,
+						travelled from Chennai to Singapore with his family on 21 May 2011,
+						where he was to undergo further treatment for nephropathy at <em>Mount Elizabeth Hospital</em>.
+						After spending over two weeks at the hospital, he was finally discharged on 15 June 2011.
+					</p>
+					<p>
+						Rajini came back on track with his films releasing.<strong>Kochadaiiyaan</strong>,the motion capture film,
+						which is the first of its kind in India, was released in 2014 to positive reviews.
+						Then the <strong>3D release of Sivaji</strong> in 2012,made Rajinikanth the first Indian actor to have appeared
+						in four different forms of world cinema: <strong>black-and-white, colour, 3D and motion capture</strong>.
+
+					</p>
+					<p>
+						Rajini acted in many other Films including <em>Lingaa,Kabali,Kaala</em>.
+						In 2018 he also appeared in <em>S. Shankar's 2.0</em>, the sequel fo <em>Enthiran</em>,reprising the roles of Dr. Vaseegaran and Chitti.
+						In 2019, Rajinikanth starred in <em>Karthik Subbaraj's Petta</em>, in which his performance received praise for his return to his <em>vintage stereotypical style</em> of acting.
+					</p>
+					<br />
+				</section>
+				<br /><br />
+
+
+			</aside>
+			<aside class="NRight">
+				<br />
+				<table>
+					<tr>
+						<th></th>
+						<th></th>
+						<th></th>
+					</tr>
+					<!--An error occurs when the first row of the table uses colspan, hence an empty first row had been created.-->
+					<tr>
+						<td colspan="3"><div class="Heading">Personal Details</div></td>
+					</tr>
+					<tr>
+						<td colspan="3"><img src="../img/PersonalLife/Image1.jpeg" class="ImageN" alt="Image of Rajinikanth"></td>
+					</tr>
+					<tr>
+						<td>Real Name</td>
+						<td colspan="2"><strong>Shivaji Rao Gaekwad</strong></td>
+					</tr>
+					<tr>
+						<td>Date of Birth</td>
+						<td colspan="2"><strong> 12<sup>th</sup> December 1950</strong></td>
+					</tr>
+					<tr>
+						<td>Place of Birth</td>
+						<td colspan="2"><strong>Bangalore, Mysore State(Present-Day Karnataka, India)</strong></td>
+					</tr>
+					<tr>
+						<td>Occupation</td>
+						<td colspan="2"><strong>Actor,Film Producer</strong></td>
+					</tr>
+					<tr>
+						<td>Years Active</td>
+						<td colspan="2"><strong>1975-Present</strong></td>
+					</tr>
+					<tr>
+						<td>Father's Name</td>
+						<td colspan="2"><strong>Ramoji Rao Gaekwad</strong></td>
+					</tr>
+					<tr>
+						<td>Mother's Name</td>
+						<td colspan="2"><strong>Jijabai</strong></td>
+					</tr>
+					<tr>
+						<td>Spouse's Name</td>
+						<td colspan="2"><strong>Latha Rajinikanth</strong></td>
+					</tr>
+				</table>
+
+				<br /><br />
+
+				<table>
+					<tr>
+						<th></th>
+						<th></th>
+						<th></th>
+					</tr>
+					<tr>
+						<td colspan="3"><div class="Heading">Contact Details</div></td>
+					</tr>
+					<tr>
+						<td>Address</td>
+						<td colspan="2"><strong>18, Raghavaveera Avenue, Poes Garden, Chennai 600086, Tamil Nadu, India</strong></td>
+					</tr>
+					<tr>
+						<td>Contact Number</td>
+						<td colspan="2"><strong>+91 88702-02833</strong></td>
+					</tr>
+					<tr>
+						<td>Social Media</td>
+						<td colspan="2">
+							<a href="https://twitter.com/rajinikanth" target="_blank" class="fa fa-twitter"></a>
+							<a href="https://www.instagram.com/rajinikanth" target="_blank" class="fa fa-instagram"></a>
+						</td>
+					</tr>
+
+				</table>
+
+				<br />
+				<h1>Photos</h1>
+				<br />
+
+				<img src="../img/PersonalLife/Image2.jpeg" class="ImageN" alt="Image of Rajinikanth">
+
+				<br />
+				<p><strong>Enthiran-Rajinikanth</strong></p>
+				<br />
+
+				<img src="../img/PersonalLife/Image3.jpeg" class="ImageN" alt="Image of Rajinikanth">
+
+				<br />
+				<p><strong>Present-Day Rajinikanth</strong></p>
+				<br />
+
+				<img src="../img/PersonalLife/Image4.jpeg" class="ImageN" alt="Image of Rajinikanth">
+
+				<br />
+				<p><strong>Rajinikanth and his Characters.</strong></p>
+				
+			</aside>
+			<br />
+			<hr />
+		</div>
+	</div>
+
+	
+	<br />
+
+
+	<footer id="Footer">
+		<br />
+		<aside class="left">
+			<h3>&#169; Copyright 2021 | Designed by SSK Creations</h3>
+			<h3><a href="../SourceAndCredits/SourceAndCredits.html"><strong>Source and Credits</strong></a></h3>
+			<a href="https://www.facebook.com/Rajnikanthfanzz/" target="_blank" class="fa fa-facebook"></a>
+			<a href="https://twitter.com/RajiniFC" target="_blank" class="fa fa-twitter"></a>
+			<a href="https://www.youtube.com/c/SuperstarRajinikanthTheLegend" target="_blank" class="fa fa-youtube"></a>
+			<a href="https://www.instagram.com/rajinikanthfanclub/" target="_blank" class="fa fa-instagram"></a>
+		</aside>
+		<aside class="right">
+			<h3>Contact Us at:</h3>
+			<h4>E-Mail : <a href="mailto:Admin@RajiniFans.com"><strong>Admin@RajiniFans.com</strong></a></h4>
+			<h4>Phone : <strong>+91 96XXX XXXXX</strong></h4>
+		</aside>
+	</footer>
+
+
+</body>
+
+</html>
